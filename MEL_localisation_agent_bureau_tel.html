@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
     <title>Agents Cerema NC / DLAB / MEL</title>
 </head>
 <body>
-
-<!--<label for="affichage">Choisir un nom :</label>-->
-
-
-
 <table width="415px"><tr><td width="300px">
 	<select id="affichage" onchange="afficherInfos()">
 		<option value="" disabled selected>Choisissez un agent :  </option>
@@ -28,15 +22,13 @@
 		<option value="Tezkratt Samy">Tezkratt Samy</option>
 	</select>
     
-	&nbsp;&nbsp;<p id="resultat"></p>
+	&nbsp;<p id="resultat"></p>
 <td width="15px">&nbsp;</td>	
 <td width="100px">
     <img id="imagePortrait" style="height: 100px;" /></td>	                    
 </td>
 </tr></table>
-
 <img id="imagePosition" style="height: 600px;" />
-
 
 <script>
     function afficherInfos() {
@@ -44,7 +36,6 @@
         var resultatParagraphe = document.getElementById("resultat");
         var imagePosition = document.getElementById("imagePosition");
         var imagePortrait = document.getElementById("imagePortrait");
-
         var bureau = "";
         var telephone = "";
         var position = "";
@@ -57,7 +48,7 @@
                 bureau = "219";
                 telephone = "06 63 72 02 78";
                 position = loc_png+ "219_l_aubin.png";
-				portrait = loc_png+ "219_l_aubin_photo.png";
+		portrait = loc_png+ "219_l_aubin_photo.png";
                 break;
             case "Auger Antony":
                 bureau = "210";
@@ -139,17 +130,9 @@
                 break;
         }
 
-        // Affichage des informations
-		
-		imagePortrait.src = portrait;
+        imagePortrait.src = portrait;
         resultatParagraphe.innerHTML =  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Téléphone&nbsp;:&nbsp;" + telephone + "<br>" +
-										"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bureau&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + bureau ;
-		
-		
-        // Affichage de l'image
+										"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bureau&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + bureau ;	
         imagePosition.src = position;
     }
-</script>
-
-</body>
-</html>
+</script></body></html>
