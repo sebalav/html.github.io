@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agents Cerema NC / DLAB / MEL</title>
+</head>
+<body>
+
+<!--<label for="affichage">Choisir un nom :</label>-->
+
+
+
+<table width="415px"><tr><td width="300px">
+	<select id="affichage" onchange="afficherInfos()">
+		<option value="" disabled selected>Choisissez un agent :  </option>
+		<option value="Auger Antony">Auger Antony</option>
+		<option value="Bouland Sébastien">Bouland Sébastien</option>
+		<option value="Dussart Hervé">Dussart Hervé</option>
+		<option value="Dupont Pauline">Dupont Pauline</option>
+		<option value="Midy Noémie">Midy Noémie</option>
+		<option value="Aubin Lætitia">Aubin Lætitia</option>
+		<option value="Hovart Laëtitia">Hovart Laëtitia</option>
+		<option value="Jobin Maxime">Jobin Maxime</option>
+		<option value="Vigné Pierre">Vigné Pierre</option>
+		<option value="Delafenêtre Cécile">Delafenêtre Cécile</option>
+		<option value="Gimard Antonin">Gimard Antonin</option>
+		<option value="Bonguet William">Bonguet William</option>
+		<option value="Ecroulant David">Ecroulant David</option>
+		<option value="Tezkratt Samy">Tezkratt Samy</option>
+	</select>
+    
+	&nbsp;&nbsp;<p id="resultat"></p>
+<td width="15px">&nbsp;</td>	
+<td width="100px">
+    <img id="imagePortrait" style="height: 100px;" /></td>	                    
+</td>
+</tr></table>
+
+<img id="imagePosition" style="height: 600px;" />
+
+
+<script>
+    function afficherInfos() {
+        var affichageSelect = document.getElementById("affichage");
+        var resultatParagraphe = document.getElementById("resultat");
+        var imagePosition = document.getElementById("imagePosition");
+        var imagePortrait = document.getElementById("imagePortrait");
+
+        var bureau = "";
+        var telephone = "";
+        var position = "";
+        var portrait = "";
+        var loc_png = "https://www.geolittoral.developpement-durable.gouv.fr/IMG/png/";
+        var loc_jpg = "https://www.geolittoral.developpement-durable.gouv.fr/IMG/jpg/";
+
+        switch (affichageSelect.value) {
+            case "Aubin Lætitia":
+                bureau = "219";
+                telephone = "06 63 72 02 78";
+                position = loc_png+ "219_l_aubin.png";
+				portrait = loc_png+ "219_l_aubin_photo.png";
+                break;
+            case "Auger Antony":
+                bureau = "210";
+                telephone = "06 58 35 28 86";
+                position = loc_png+ "210_a_auger.png";
+                portrait = loc_jpg+ "210_a_auger_photo.jpg";
+                break;
+            case "Bonguet William":
+                bureau = "231";
+                telephone = "06 58 59 14 75";
+                position = loc_png+ "231_w_bonguet.png";
+                portrait = loc_png+ "231_w_bonguet_photo.png";
+                break;
+            case "Bouland Sébastien":
+                bureau = "213";
+                telephone = "06 64 00 57 30";
+                position = loc_png+ "213_s_bouland_h_dussart.png";
+                portrait = loc_png+ "213_s_bouland_photo_h_dussart.png";
+                break;
+            case "Delafenêtre Cécile":
+                bureau = "226";
+                telephone = "06 99 84 42 06";
+                position = loc_png+ "226_c_delafenetre.png";
+                portrait = loc_png+ "a_venir_photo.png";
+                break;
+            case "Dupont Pauline":
+                bureau = "214";
+                telephone = "02 35 68 81 00";
+                position = loc_png+ "214_p_dupont_n_midy.png";
+                portrait = loc_png+ "a_venir_photo.png";
+                break;
+            case "Dussart Hervé":
+                bureau = "213";
+                telephone = "02 35 68 88 66";
+                position = loc_png+ "213_s_bouland_h_dussart.png";
+                portrait = loc_png+ "213_s_bouland_h_dussart_photo.png";
+                break;
+            case "Ecroulant David":
+                bureau = "232";
+                telephone = "06 64 00 53 37";
+                position = loc_png+ "232_d_ecroulant_s_tezkratt.png";
+                portrait = loc_png+ "232_d_ecroulant_photo_s_tezkratt.png";
+                break;
+            case "Gimard Antonin":
+                bureau = "227";
+                telephone = "06 58 68 50 53";
+                position = loc_png+ "227_a_gimard.png";
+                portrait = loc_png+ "227_a_gimard_photo.png";
+                break;
+            case "Hovart Laëtitia":
+                bureau = "220";
+                telephone = "06 99 84 38 59";
+                position = loc_png+ "220_l_hovart.png";
+                portrait = loc_png+ "220_l_hovart_photo.png";
+                break;
+            case "Jobin Maxime":
+                bureau = "223";
+                telephone = "06 59 39 91 70";
+                position = loc_png+ "223_m_jobin.png";
+                portrait = loc_png+ "223_m_jobin_photo.png";
+                break;
+            case "Midy Noémie":
+                bureau = "214";
+                telephone = "06 68 76 49 29";
+                position = loc_png+ "214_p_dupont_n_midy.png";
+                portrait = loc_png+ "214_p_dupont_n_midy_photo.png";
+                break;
+            case "Tezkratt Samy":
+                bureau = "232";
+                telephone = "02 35 68 81 00";
+                position = loc_png+ "232_d_ecroulant_s_tezkratt.png";
+                portrait = loc_png+ "a_venir_photo.png";
+                break;
+            case "Vigné Pierre":
+                bureau = "224";
+                telephone = "06 64 00 51 06";
+                position = loc_png+ "224_p_vigne.png";
+                portrait = loc_png+ "224_p_vigne_photo.png";
+                break;
+        }
+
+        // Affichage des informations
+		
+		imagePortrait.src = portrait;
+        resultatParagraphe.innerHTML =  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Téléphone&nbsp;:&nbsp;" + telephone + "<br>" +
+										"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bureau&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + bureau ;
+		
+		
+        // Affichage de l'image
+        imagePosition.src = position;
+    }
+</script>
+
+</body>
+</html>
