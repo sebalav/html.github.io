@@ -36,7 +36,6 @@
         const secondDropdownRange = feuill + '!'+col_1erniv+'1:'+col_hierar+last_row;
         const infoRange =           feuill + '!'+col_descri+'1:'+col_descri+last_row;
         const apiKey = 'AIzaSyBg_eILPALm5X7p6onJXsAGJbBgmXx4lWU'; 
-
         const firstDropdownUrl =  `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${firstDropdownRange}?key=${apiKey}`;
         const secondDropdownUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${secondDropdownRange}?key=${apiKey}`;
         const infoUrl =           `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${infoRange}?key=${apiKey}`;
@@ -118,8 +117,6 @@
                     info.innerHTML = data.values[selectedRowIndex - 1][0]; // Soustraire 1 pour obtenir l'index correct (commence à 0)
             });
         });
-
     </script>
-
 </body>
 </html>
