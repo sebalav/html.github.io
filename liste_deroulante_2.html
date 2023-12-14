@@ -77,7 +77,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const dropdown = document.getElementById('secondDropdown');
-                    dropdown.innerHTML = ''; // Réinitialiser la liste déroulante
+                    dropdown.innerHTML = defaultOption;//''; // Réinitialiser la liste déroulante
 
                     const values = data.values;
                     values.forEach((row, index) => {
