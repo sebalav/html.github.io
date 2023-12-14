@@ -94,7 +94,9 @@
                             dropdown.appendChild(option);
                         }
                     });
-                    const defaultOption = defaultOption;//dropdown.options[0];
+                    const defaultOption = document.createElement('option');
+                    defaultOption.value = "";
+                    defaultOption.textContent = "2- Sélectionnez une donnée pour afficher sa description ...";
                     defaultOption.style.fontFamily = fontFamily;
                     defaultOption.style.fontSize = fontSize;
                     dropdown.insertBefore(defaultOption, dropdown.firstChild);
