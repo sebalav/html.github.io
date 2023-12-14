@@ -97,6 +97,8 @@
                     const defaultOption = dropdown.options[0];
                     defaultOption.style.fontFamily = fontFamily;
                     defaultOption.style.fontSize = fontSize;
+		            const event = new Event('change');
+		            dropdown.dispatchEvent(event);
                 });
         }
 
