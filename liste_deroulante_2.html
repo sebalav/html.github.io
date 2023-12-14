@@ -77,7 +77,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const dropdown = document.getElementById('secondDropdown');
-                    dropdown.innerHTML = defaultOption;//''; // Réinitialiser la liste déroulante
+                    dropdown.innerHTML = ''; // Réinitialiser la liste déroulante
 
                     const values = data.values;
                     values.forEach((row, index) => {
@@ -94,7 +94,7 @@
                             dropdown.appendChild(option);
                         }
                     });
-                    const defaultOption = dropdown.options[0];
+                    const defaultOption = defaultOption;//dropdown.options[0];
                     defaultOption.style.fontFamily = fontFamily;
                     defaultOption.style.fontSize = fontSize;
                     dropdown.insertBefore(defaultOption, dropdown.firstChild);
