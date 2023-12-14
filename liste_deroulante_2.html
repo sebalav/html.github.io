@@ -78,6 +78,7 @@
                 .then(data => {
                     const dropdown = document.getElementById('secondDropdown');
                     dropdown.innerHTML = ''; // Réinitialiser la liste déroulante
+
                     const values = data.values;
                     values.forEach((row, index) => {
                         if (row[0] === selectedValue) {
@@ -93,8 +94,7 @@
                             dropdown.appendChild(option);
                         }
                     });
-                    defaultOption.value = "";
-                    defaultOption.textContent = "2- Sélectionnez une donnée pour afficher sa description ...";
+                    const defaultOption = dropdown.options[0];
                     defaultOption.style.fontFamily = fontFamily;
                     defaultOption.style.fontSize = fontSize;
                 });
