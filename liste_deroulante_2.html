@@ -97,6 +97,7 @@
                     const defaultOption = dropdown.options[0];
                     defaultOption.style.fontFamily = fontFamily;
                     defaultOption.style.fontSize = fontSize;
+                    dropdown.insertBefore(defaultOption, dropdown.firstChild);
                 });
         }
 
