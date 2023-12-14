@@ -78,11 +78,6 @@
                 .then(data => {
                     const dropdown = document.getElementById('secondDropdown');
                     dropdown.innerHTML = ''; // Réinitialiser la liste déroulante
-
-                    // Ajouter à nouveau l'option par défaut
-                    defaultOption.value = "";
-                    defaultOption.textContent = "2- Sélectionnez une donnée pour afficher sa description ...";
-                    
                     const values = data.values;
                     values.forEach((row, index) => {
                         if (row[0] === selectedValue) {
@@ -98,12 +93,10 @@
                             dropdown.appendChild(option);
                         }
                     });
-                    const defaultOption = document.createElement('option');
                     defaultOption.value = "";
                     defaultOption.textContent = "2- Sélectionnez une donnée pour afficher sa description ...";
                     defaultOption.style.fontFamily = fontFamily;
                     defaultOption.style.fontSize = fontSize;
-                    dropdown.insertBefore(defaultOption, dropdown.firstChild);
                 });
         }
 
